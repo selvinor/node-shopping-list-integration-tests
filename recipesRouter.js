@@ -53,7 +53,7 @@ router.delete("/:id", (req, res) => {
 // of that, log error and send back status code 400. otherwise
 // call `Recipes.updateItem` with updated recipe.
 router.put("/:id", (req, res) => {
-  const requiredFields = ["name", "ingredients", "id"];
+  const requiredFields =  ["id", "name", "ingredients"];
   for (let i = 0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
